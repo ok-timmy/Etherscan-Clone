@@ -13,6 +13,7 @@ const SearchSection: FC = () => {
     flex-direction: column;
     justify-content: center;
     padding: 1rem 1rem;
+    z-index: 500;
 
     .formHeader {
       color: white;

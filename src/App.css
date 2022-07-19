@@ -1,5 +1,6 @@
 .App {
-  font-family: 'Zen Kaku Gothic New', sans-serif
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  overflow-x: hidden;
 }
 
 

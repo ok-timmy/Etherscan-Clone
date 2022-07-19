@@ -12,7 +12,9 @@ function App() {
     <div className="App">
     <Header/>
     <SearchSection/>
+    <div style={{backgroundColor: '#FCFCFD'}}>
     <Current/>
+    </div>
     <div>
       <TransactionBox/>
       <TransactionBox/>
