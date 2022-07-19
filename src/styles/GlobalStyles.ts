@@ -21,7 +21,7 @@ html {
 }
 body {
     height: 100%;
-    font-family: 'Open Sans', sans-serif;
+    font-family: Zen Kaku Gothic New, sans-serif;
     -webkit-font-smoothing: antialiased;
     a {
         outline: none;
