@@ -6,7 +6,6 @@ import { Search } from 'react-bootstrap-icons'
 
 const SearchSection: FC = () => {
   const CurrentSection = styled.div`
-    width: 100%;
     height: 40vh;
     background: #22335c;
     display: flex;

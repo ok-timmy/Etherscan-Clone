@@ -7,15 +7,19 @@ import Notepad from '../Assets/icon-2-1.svg'
 import Difficulty from '../Assets/icon-51.svg'
 
 const CurrentDiv = styled.div`
-  margin: -3rem 1rem 0;
   padding: 1rem;
+  margin: 0 auto;
+  top: -2rem;
   border-radius: 20px;
-  background- color: ${bgColor.lightTheme};
+  background-color: ${bgColor.lightTheme};
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+  position: absolute;
+  width: 100%;
+  box-shadow: 0 0.5rem 1.2rem rgb(189 197 209 / 20%);
 
   &::nth-child(2) {
     border-left: 1px solid gray;
@@ -26,6 +30,7 @@ const CurrentDiv = styled.div`
 const InnerDiv = styled.div`
   display: flex;
   flex-direction: column;
+  padding: 0.5rem 0rem;
 
   .green{
     color: green;
@@ -38,19 +43,19 @@ const InnerDiv = styled.div`
 
   .col-1-heading {
     font-size: 1rem;
-    margin-bottom: -16px;
   }
   .col-1{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-
+    padding: 1rem;
   }
-
+  
   .col-2{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
 
 .col-2-inner{
   display: flex;
@@ -118,7 +123,35 @@ const Current: FC = () => {
           </div>
         </div>
       </InnerDiv>
-      <div></div>
+      <InnerDiv>
+        <div className='col-2'>
+          <div className='col-2-inner'>
+            <Image src={Notepad} alt=""/>
+            <div>
+              <p className='col-1-heading'>TRANSACTIONS</p>
+              <p>1,644.61 M <span className='small'>(13.4 TPS)</span></p>
+            </div>
+          </div>
+          <div>
+          <p className='col-1-heading'>MED GAS PRICE</p>
+          <p>30 Gwei  <span className='small'>($0.91)</span></p>
+          </div>
+        </div>
+        <div className='col-2'>
+        <div className='col-2-inner'>
+            <Image src={Difficulty} alt=""/>
+            <div>
+              <p className='col-1-heading'>DIFFICULTY</p>
+              <p>1,644.61 M <span className='small'>(13.4 TPS)</span></p>
+            </div>
+          </div>
+          <div>
+          <p className='col-1-heading'>HASH RATE</p>
+          <p>927,411.29 GH/s</p>
+          </div>
+        </div>
+        </InnerDiv>
+      {/* <div></div> */}
     </CurrentDiv>
   )
 }

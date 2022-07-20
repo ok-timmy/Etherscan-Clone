@@ -1,6 +1,13 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
   font-family: 'Zen Kaku Gothic New', sans-serif;
   overflow-x: hidden;
+  width: 100%;
 }
 
 
