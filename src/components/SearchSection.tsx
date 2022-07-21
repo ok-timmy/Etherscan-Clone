@@ -6,37 +6,45 @@ import { Search } from 'react-bootstrap-icons'
 
 const SearchSection: FC = () => {
   const CurrentSection = styled.div`
-    height: 40vh;
+    height: 47vh;
     background: #22335c;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     padding: 1rem 1rem;
     z-index: 500;
 
     .formHeader {
       color: white;
-      margin-bottom: 0.8rem;
+      margin: 2rem 0 0;
+      font-size: 20px;
+      font-weight: bold;
     }
   `
 
   const Form = styled.form`
     display: flex;
     height: 2.8rem;
-    max-width: 50vw;
+    max-width: 55vw;
     border-radius: 40px;
+    margin: 1rem 0 0.5rem;
 
     .select {
       padding: 0 1rem;
       color: black;
       border-radius: 5px 0 0 5px;
       flex: 3;
+      &:focus {
+        outline: none;
+      }
     }
 
     .searchInput {
       width: 100%;
       padding: 0 1rem;
       flex: 15;
+
+      &:focus {
+        outline: none;
+        border: #3498db 1px solid;
+      }
     }
 
     .searchButton {
@@ -45,14 +53,15 @@ const SearchSection: FC = () => {
       border: none;
       padding: 1rem 1rem;
       border-radius: 0 5px 5px 0;
-      flex: 1;
       font-size: 1rem;
+      max-width: 4rem;
     }
   `
 
   const Paragraph = styled.p`
     color: #bfc4d0;
-    font-size: 14px;
+    font-size: 1rem;
+    font-weight: bold;
     margin-top: 5px;
 
     img {
@@ -70,7 +79,7 @@ const SearchSection: FC = () => {
 
   return (
     <CurrentSection>
-      <h2 className="formHeader"> The Ethereum Blockchain Explorer</h2>
+      <p className="formHeader"> The Ethereum Blockchain Explorer</p>
       <Form>
         <select className="select">
           <option>All Filters</option>

@@ -1,22 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
+import BlockBox from './BlockBox'
 import TransactionBox from './TransactionBox'
 
-
 const TandB = styled.div`
-padding: 1rem;
-display: grid;
+margin-top: -1rem;
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 1rem;
-background-color: #FCFCFD;
-
+  background-color: #fcfcfd;
 `
 const TransactionAndBlockSection = () => {
   return (
     <TandB>
-    <TransactionBox/>
-    <TransactionBox/>
+      <BlockBox />
+      <TransactionBox />
+      {/* <TransactionBox/> */}
     </TandB>
   )
 }

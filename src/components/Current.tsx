@@ -7,21 +7,27 @@ import Notepad from '../Assets/icon-2-1.svg'
 import Difficulty from '../Assets/icon-51.svg'
 
 const CurrentDiv = styled.div`
-  padding: 1rem;
-  margin: 0 auto;
-  top: -2rem;
-  border-radius: 20px;
+
+display: relative;
+
+.inner{
+  border-radius: 10px;
   background-color: ${bgColor.lightTheme};
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  position: absolute;
+  margin: 0 auto;
+  z-index: 10000;
+  -webkit-transform: translateY(-3rem);
+  transform: translateY(-3rem);
   width: 100%;
   box-shadow: 0 0.5rem 1.2rem rgb(189 197 209 / 20%);
+}
+ 
 
-  &::nth-child(2) {
+  &:nth-child(2) {
     border-left: 1px solid gray;
     border-right: 1px solid gray;
   }
@@ -32,38 +38,38 @@ const InnerDiv = styled.div`
   flex-direction: column;
   padding: 0.5rem 0rem;
 
-  .green{
+  .green {
     color: green;
     font-size: 12px;
   }
 
-  .small{
+  .small {
     font-size: 12px;
   }
 
   .col-1-heading {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
   }
-  .col-1{
+  .col-1 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 1rem;
   }
-  
-  .col-2{
+
+  .col-2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
 
-.col-2-inner{
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
+    .col-2-inner {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
-
 `
 
 const Image = styled.img`
@@ -75,83 +81,95 @@ const Image = styled.img`
 const Current: FC = () => {
   return (
     <CurrentDiv>
-      <InnerDiv>
-        <div className='col-1'>
-          <Image src={ethereumOne} alt="" />
-          <div>
-          <p className='col-1-heading'>ETHER PRICE</p>
-          <p>
-            $1,471.95 @ 0.0685 BTC <span className='green'>(+7.92%)</span>
-          </p>
-          </div>
-        </div>
-        <div className='col-1'>
-          <Image src={globe} alt="globe"/>
-          <div>
-          <p className='col-1-heading'>MARKET CAP</p>
-          <p>
-          $176,240,834,841.00
-          </p>
-          </div>
-        </div>
-      </InnerDiv>
-      <InnerDiv>
-        <div className='col-2'>
-          <div className='col-2-inner'>
-            <Image src={Notepad} alt=""/>
+      <div className='inner'>
+        <InnerDiv>
+          <div className="col-1">
+            <Image src={ethereumOne} alt="" />
             <div>
-              <p className='col-1-heading'>TRANSACTIONS</p>
-              <p>1,644.61 M <span className='small'>(13.4 TPS)</span></p>
+              <p className="col-1-heading">ETHER PRICE</p>
+              <p>
+                $1,471.95 @ 0.0685 BTC <span className="green">(+7.92%)</span>
+              </p>
             </div>
           </div>
-          <div>
-          <p className='col-1-heading'>MED GAS PRICE</p>
-          <p>30 Gwei  <span className='small'>($0.91)</span></p>
-          </div>
-        </div>
-        <div className='col-2'>
-        <div className='col-2-inner'>
-            <Image src={Difficulty} alt=""/>
+          <div className="col-1">
+            <Image src={globe} alt="globe" />
             <div>
-              <p className='col-1-heading'>DIFFICULTY</p>
-              <p>1,644.61 M <span className='small'>(13.4 TPS)</span></p>
+              <p className="col-1-heading">MARKET CAP</p>
+              <p>$176,240,834,841.00</p>
             </div>
           </div>
-          <div>
-          <p className='col-1-heading'>HASH RATE</p>
-          <p>927,411.29 GH/s</p>
-          </div>
-        </div>
-      </InnerDiv>
-      <InnerDiv>
-        <div className='col-2'>
-          <div className='col-2-inner'>
-            <Image src={Notepad} alt=""/>
-            <div>
-              <p className='col-1-heading'>TRANSACTIONS</p>
-              <p>1,644.61 M <span className='small'>(13.4 TPS)</span></p>
-            </div>
-          </div>
-          <div>
-          <p className='col-1-heading'>MED GAS PRICE</p>
-          <p>30 Gwei  <span className='small'>($0.91)</span></p>
-          </div>
-        </div>
-        <div className='col-2'>
-        <div className='col-2-inner'>
-            <Image src={Difficulty} alt=""/>
-            <div>
-              <p className='col-1-heading'>DIFFICULTY</p>
-              <p>1,644.61 M <span className='small'>(13.4 TPS)</span></p>
-            </div>
-          </div>
-          <div>
-          <p className='col-1-heading'>HASH RATE</p>
-          <p>927,411.29 GH/s</p>
-          </div>
-        </div>
         </InnerDiv>
-      {/* <div></div> */}
+        <InnerDiv>
+          <div className="col-2">
+            <div className="col-2-inner">
+              <Image src={Notepad} alt="" />
+              <div>
+                <p className="col-1-heading">TRANSACTIONS</p>
+                <p>
+                  1,644.61 M <span className="small">(13.4 TPS)</span>
+                </p>
+              </div>
+            </div>
+            <div>
+              <p className="col-1-heading">MED GAS PRICE</p>
+              <p>
+                30 Gwei <span className="small">($0.91)</span>
+              </p>
+            </div>
+          </div>
+          <div className="col-2">
+            <div className="col-2-inner">
+              <Image src={Difficulty} alt="" />
+              <div>
+                <p className="col-1-heading">DIFFICULTY</p>
+                <p>
+                  1,644.61 M <span className="small">(13.4 TPS)</span>
+                </p>
+              </div>
+            </div>
+            <div>
+              <p className="col-1-heading">HASH RATE</p>
+              <p>927,411.29 GH/s</p>
+            </div>
+          </div>
+        </InnerDiv>
+        <InnerDiv>
+          <div className="col-2">
+            <div className="col-2-inner">
+              <Image src={Notepad} alt="" />
+              <div>
+                <p className="col-1-heading">TRANSACTIONS</p>
+                <p>
+                  1,644.61 M <span className="small">(13.4 TPS)</span>
+                </p>
+              </div>
+            </div>
+            <div>
+              <p className="col-1-heading">MED GAS PRICE</p>
+              <p>
+                30 Gwei <span className="small">($0.91)</span>
+              </p>
+            </div>
+          </div>
+          <div className="col-2">
+            <div className="col-2-inner">
+              <Image src={Difficulty} alt="" />
+              <div>
+                <p className="col-1-heading">DIFFICULTY</p>
+                <p>
+                  1,644.61 M <span className="small">(13.4 TPS)</span>
+                </p>
+              </div>
+            </div>
+            <div>
+              <p className="col-1-heading">HASH RATE</p>
+              <p>927,411.29 GH/s</p>
+            </div>
+          </div>
+        </InnerDiv>
+        {/* <div></div> */}
+      </div>
     </CurrentDiv>
   )
 }

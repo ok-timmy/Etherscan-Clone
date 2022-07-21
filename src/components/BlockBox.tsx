@@ -1,12 +1,14 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import SingleTx from './SingleTx'
+import SingleBlock from './SingleBlock'
 
 const Table = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 10px;
   border: 1px solid #a8a8a8;
+  box-shadow: 0 0.5rem 1.2rem rgb(189 197 209 / 20%);
+}
 `
 
 const TableHeader = styled.div`
@@ -16,8 +18,6 @@ const TableHeader = styled.div`
 
 const TableContent = styled.div`
   padding: 0 0.5rem;
-  box-shadow: 0 0.5rem 1.2rem rgb(189 197 209 / 20%);
-}
 
   .boxContent {
     overflow-y: scroll;
@@ -56,7 +56,7 @@ const TableButton = styled.div`
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: rgba(234, 244, 251, 0.7);
+    background-color: rgba(234, 244, 251, 0.8);
     color: #3498db;
 
     &:hover {
@@ -66,24 +66,24 @@ const TableButton = styled.div`
   }
 `
 
-const TransactionBox: FC = () => {
+const BlockBox: FC = () => {
   return (
     <Table>
       <TableHeader>
-        <h4>Latest Transactions</h4>
+        <h4>Latest Blocks</h4>
       </TableHeader>
       <TableContent>
         <div className="boxContent">
-          <SingleTx />
-          <SingleTx />
-          <SingleTx />
-          <SingleTx />
-          <SingleTx />
-          <SingleTx />
-          <SingleTx />
-          <SingleTx />
-          <SingleTx />
-          <SingleTx />
+          <SingleBlock />
+          <SingleBlock />
+          <SingleBlock />
+          <SingleBlock />
+          <SingleBlock />
+          <SingleBlock />
+          <SingleBlock />
+          <SingleBlock />
+          <SingleBlock />
+          <SingleBlock />
         </div>
       </TableContent>
       <TableButton>
@@ -93,4 +93,4 @@ const TransactionBox: FC = () => {
   )
 }
 
-export default TransactionBox
+export default BlockBox
