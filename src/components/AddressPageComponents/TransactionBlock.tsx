@@ -12,6 +12,7 @@ const TransactionBlockDiv = styled.div`
   padding: 0 1rem;
   width: 100%;
   background-color: white;
+  border-radius: 10px;
   box-shadow: 0 0.5rem 1.2rem rgb(189 197 209 / 20%);
 `
 
@@ -70,6 +71,8 @@ const TransactionTable = styled.table`
       }
       th {
         text-align: left;
+        font-size: 0.9rem;
+        font-weight: bold;
 
 
         .funnel {
@@ -78,7 +81,7 @@ const TransactionTable = styled.table`
           padding: 0.1rem 0.3rem;
           border-radius: 5px;
           font-size: 12px;
-          margin-left: 8px;
+          margin-left: 4px;
         }
       }
     }
@@ -171,6 +174,30 @@ const TransactionBlock: FC = () => {
           </tr>
         </thead>
         <tbody>
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
+          <SingleTransaction />
           <SingleTransaction />
         </tbody>
       </TransactionTable>
