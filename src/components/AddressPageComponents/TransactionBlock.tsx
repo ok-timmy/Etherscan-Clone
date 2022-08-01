@@ -57,6 +57,7 @@ font-weight: 600;
   height: 1.7rem;
   background color: #D5DAE2;
   border-radius: 5px;
+  border: none;
 }
 `
 

@@ -5,7 +5,8 @@ import { bgColor, buttonColor, hoverColor } from '../utils/themes/colors'
 import ethereumLogo from '../Assets/logo-etherscan.svg'
 import eth from '../Assets/ethereum-icon.webp'
 import { linkFonts } from '../utils/typography/fonts'
-import { PersonCircle } from 'react-bootstrap-icons'
+import { ChevronDown, PersonCircle } from 'react-bootstrap-icons'
+import SearchForm from './SearchForm'
 
 const Header: FC = () => {
   const HeaderContainer = styled.div`
@@ -18,12 +19,25 @@ const Header: FC = () => {
     .logo {
       height: 40px;
       width: 160px;
+      margin-bottom: 8px;
+
+    }
+    .bal {
+      padding: 0.2rem 0.6rem;
+      font-size: 0.8rem;
+      background: #F8F9F9;
+      border-radius: 5px;
+      word-spacing: 4px;
+
+      .diff{
+        color: green;
+      }
     }
   `
 
   const NavList = styled(Flex)`
     .nav {
-      margin: 10px;
+      margin: 12px;
       padding: 0 5px;
 
       a {
@@ -56,10 +70,6 @@ const Header: FC = () => {
 
   const navlinks = [
     {
-      name: 'Home',
-      link: 'https://www.etherscan.io',
-    },
-    {
       name: 'Blockchain',
       link: '#',
     },
@@ -80,16 +90,25 @@ const Header: FC = () => {
   return (
     <HeaderContainer>
       <MainHeader justifyContent="space-between">
+        <div>
         <a href="https://etherscan.io">
           <img src={ethereumLogo} alt="ethereumLogo" className="logo" />
         </a>
+        <p className='bal'>Eth: $1,697.92  <span className='diff'>(+0.05%)</span>  |  10 Gwei</p>
+        </div>
 
+        <div>
+          <SearchForm maxWidth={'50vw'} fontSize={'14px'} height={'2.4rem'} margin={'0.25rem 0 0.25rem'}/>
         <NavList justifyContent="space-between">
+              <nav className="nav">
+                {' '}
+                <a href='https://etherscan.io'>Home</a>
+              </nav>
           {navlinks.map(({ name, link }) => {
             return (
               <nav className="nav" key={name}>
                 {' '}
-                <a href={link}>{name}</a>
+                <a href={link}>{name} <ChevronDown fontSize={'10px'}/></a>
               </nav>
             )
           })}
@@ -102,6 +121,7 @@ const Header: FC = () => {
             <img src={eth} alt="" className="btn-image" />
           </button>
         </NavList>
+        </div>
       </MainHeader>
     </HeaderContainer>
   )

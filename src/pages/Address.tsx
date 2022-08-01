@@ -47,6 +47,11 @@ const AddressDiv = styled.div`
     font-size: 0.8rem;
     border: none;
     margin-right: 0.5rem;
+
+    :hover {
+      background: #7b8a96;
+      color: white;
+    }
   }
 `
 
@@ -62,6 +67,9 @@ const ButtonsContainer = styled.div`
     padding: 0 16px;
     border-radius: 4px;
     margin-right: 12px;
+    height: 2rem;
+
+
 
     .chevron {
       margin: 0 -0.5rem 0 0.5rem;
@@ -79,8 +87,7 @@ const Section = styled.div`
 `
 
 const Address: FC = () => {
-  const buttonsContent = ['Buy', 'Exchange', 'Earn', 'Gaming']
-
+  const buttonsContent = ['Buy', 'Exchange', 'Earn']
   return (
     <div style={{ backgroundColor: '#FCFCFD' }}>
       <HeroSection>
