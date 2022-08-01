@@ -10,21 +10,21 @@ const Tx = styled.div`
 `
 
 const TxLeft = styled.div`
-  display: flex;
+display: flex;
 
   .blocktag {
     background-color: #f1f2f4;
     padding: 0.8rem 1rem;
-    height: auto;
+    height: 3rem;
     border-radius: 50%;
-    margin-right: 0.5rem;
   }
 
   ul {
     list-style: none;
+    margin: 0 2rem 0 -1.5rem;
 
     .blockNumber {
-      color: #3498DB;
+      color: #3498db;
     }
 
     .time {
@@ -32,36 +32,35 @@ const TxLeft = styled.div`
       color: #77838f;
     }
   }
-
 `
 
 const TxRight = styled.div`
-display: flex;
-justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-p{
-  font-size: 1rem;
-  font-weight: 500;
-  color: #1E2022;
+  .from__to {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1e2022;
+    display: flex;
+    flex-direction: column;
 
-  a{
-    text-decoration: none;
-    color: #3498DB;
-   
-  }
+    a {
+      text-decoration: none;
+      color: #3498db;
+    }
 
-  .timeTaken {
-    font-size: 12px;
+    .timeTaken {
+      font-size: 12px;
       color: #77838f;
+    }
   }
-}
 `
 
 const SingleTx: FC = () => {
   return (
     <Tx>
       <TxLeft>
-
         <span className="blocktag">Tx</span>
         <ul>
           <li className="blockNumber">0x1c3d4169f1...</li>
@@ -70,13 +69,13 @@ const SingleTx: FC = () => {
       </TxLeft>
 
       <TxRight>
-        <div>
-          <p>
+        <div className="from__to">
+          <span>
             From <a href="#">0x1c3d4169f1c50ae.......</a>
-          </p>
-          <p>
-           To <a href='#'>0x1c3d4169f1c50ae...</a>
-          </p>
+          </span>
+          <span>
+            To <a href="#">0x1c3d4169f1c50ae...</a>
+          </span>
         </div>
         <span>2.03546</span>
       </TxRight>

@@ -51,7 +51,7 @@ const SearchSection: FC = () => {
       color: ${FontColors.darkTheme};
       background-color: #3498db;
       border: none;
-      padding: 1rem 1rem;
+      padding: 0 1rem;
       border-radius: 0 5px 5px 0;
       font-size: 1rem;
       max-width: 4rem;

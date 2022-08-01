@@ -56,6 +56,7 @@ const InnerDiv = styled.div`
     justify-content: flex-start;
     align-items: center;
     padding: 1rem;
+    width:100%;
   }
 
   .col-2 {
@@ -63,10 +64,11 @@ const InnerDiv = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    width: 100%;
 
     .col-2-inner {
       display: flex;
-      justify-content: flex-start;
+      justify-content: space-between;
       align-items: center;
     }
   }
