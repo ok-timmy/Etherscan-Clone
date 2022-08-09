@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { FontColors } from '../themes/colors'
+import { mediaQueries } from '../themes/mediaQueries'
 
 
 interface FormProps {
@@ -18,6 +19,10 @@ border-radius: 40px;
 margin: ${({margin})=> (margin? margin : '1rem 0 0.5rem')};
 font-size: ${({fontSize})=> (fontSize ? fontSize : "1rem")}}
 
+${mediaQueries.tabport} {
+  max-width: 100%;
+}
+
 .select {
   padding: 0 1rem;
   color: black;
@@ -25,6 +30,10 @@ font-size: ${({fontSize})=> (fontSize ? fontSize : "1rem")}}
   flex: 3;
   &:focus {
     outline: none;
+  }
+
+  ${mediaQueries.tabport} {
+    display: none;
   }
 }
 
@@ -36,6 +45,10 @@ font-size: ${({fontSize})=> (fontSize ? fontSize : "1rem")}}
   &:focus {
     outline: none;
     border: #3498db 1px solid;
+  }
+
+  ${mediaQueries.tabport} {
+    padding: 0 0.5rem;
   }
 }
 

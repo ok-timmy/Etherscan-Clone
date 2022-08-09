@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
+import { mediaQueries } from '../utils/themes/mediaQueries'
 
 const Tx = styled.div`
   padding: 0.5rem;
@@ -7,6 +8,11 @@ const Tx = styled.div`
   grid-template-columns: 1fr 5fr;
   grid-column-gap: 1rem;
   border-bottom: 0.2px solid #77838f;
+  width: auto;
+
+  ${mediaQueries.tabport} {
+    grid-template-columns: 1fr;
+  }
 `
 
 const TxLeft = styled.div`
@@ -20,11 +26,31 @@ margin: 0;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     margin-right: 1rem;
+    :after{
+      content: "Bk";
+    }
+
+    ${mediaQueries.tabport} {
+      background-color: white;
+      font-weight: bold;
+      padding:0;
+      height: auto;
+      width: auto;
+      :after {
+        content: "Block";
+      }
+    }
   }
+
 
   ul {
     list-style: none;
     margin: 0 2rem 0 -2rem;
+
+    ${mediaQueries.tabport} {
+      display: flex;
+      align-items: flex-end;
+    }
 
     .blockNumber {
       color: #3498DB;
@@ -42,6 +68,10 @@ const TxRight = styled.div`
 display: flex;
 justify-content: space-between;
 
+${mediaQueries.tabport} {
+  flex-direction: column;
+}
+
 .from__to{
   font-size: 1rem;
   font-weight: 500;
@@ -51,8 +81,7 @@ justify-content: space-between;
 
   a{
     text-decoration: none;
-    color: #3498DB;
-   
+    color: #3498DB; 
   }
 
   .timeTaken {
@@ -66,7 +95,7 @@ const SingleBlock: FC = () => {
   return (
     <Tx>
       <TxLeft>
-        <span className="blocktag">Bk</span>
+        <span className="blocktag"></span>
         <ul>
           <li className="blockNumber">15168936</li>
           <li className="time">2 mins ago</li>

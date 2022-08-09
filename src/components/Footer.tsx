@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import { HeartFill } from 'react-bootstrap-icons'
 import styled from 'styled-components'
 import ethereeum from '../Assets/ethereum.svg'
+import { mediaQueries } from '../utils/themes/mediaQueries'
 
 const FooterDiv = styled.div`
   display: flex;
@@ -9,15 +10,25 @@ const FooterDiv = styled.div`
   background-color: #22335c;
   padding: 1rem;
   color: white;
+
+  ${mediaQueries.tabport} {
+    padding: 2.5rem;
+  }
 `
 
 const FooterTop = styled.div`
   padding-bottom: 1.5rem;
   flex: 4;
-  display: flex;
+  display: grid;
+  grid-template-columns: 4fr 7fr;
+  grid-column-gap: 1.5rem;
+
+  ${mediaQueries.tabport} {
+    display: flex;
+    flex-direction: column;
+  }
 
   .ethereum-desc {
-    flex: 4;
     
     h3 {
       display: flex;
@@ -33,7 +44,9 @@ const FooterTop = styled.div`
         font-size: 12px;
         font-weight: 500;
       }
-
+${mediaQueries.tabport} {
+  width: 100%;
+}
     }
   }
 
@@ -45,13 +58,17 @@ const FooterTop = styled.div`
 `
 
 const FooterNavList = styled.div`
-  flex: 7;
 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 6rem;
-  grid-row-gap: 0px;
+
+  ${mediaQueries.tabport} {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 2rem;
+    grid-column-gap: 1rem;
+  }
 
   div {
     h3 {

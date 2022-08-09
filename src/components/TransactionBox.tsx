@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
+import { mediaQueries } from '../utils/themes/mediaQueries'
 import SingleTx from './SingleTx'
 
 const Table = styled.div`
@@ -7,6 +8,12 @@ const Table = styled.div`
   flex-direction: column;
   border-radius: 10px;
   border: 1px solid #a8a8a8;
+  // margin: 0 1rem 0 0;
+  max-width: auto;
+
+  ${mediaQueries.tabport} {
+    // margin: 0 1rem 0;
+  }
 `
 
 const TableHeader = styled.div`

@@ -7,16 +7,8 @@ const Home: FC = () => {
   return (
     <>
       <SearchSection />
-      <div
-        style={{
-          backgroundColor: '#FCFCFD',
-          position: 'relative',
-          margin: 'auto 1rem 2rem',
-        }}
-      >
         <Current />
         <TransactionAndBlockSection />
-      </div>
     </>
   )
 }

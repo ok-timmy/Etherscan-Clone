@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import { Search } from 'react-bootstrap-icons'
 import { Form } from '../utils/form/form'
 
@@ -11,6 +11,10 @@ interface Props {
 }
 
 const SearchForm: FC<Props> = ({maxWidth, fontSize, height, margin}) => {
+
+  const [address, setAddress] = useState("")
+  console.log(address);
+
   return (
     <Form maxWidth={maxWidth} fontSize={fontSize} height={height} margin={margin}>
     <select className="select">
@@ -25,6 +29,7 @@ const SearchForm: FC<Props> = ({maxWidth, fontSize, height, margin}) => {
       type={'text'}
       placeholder={'Search by Address/ Txn Hash / Block / Token / Ens'}
       className="searchInput"
+      onChange={(e)=>setAddress(e.target.value)}
     />
     <button className="searchButton" type="submit">
       <Search />

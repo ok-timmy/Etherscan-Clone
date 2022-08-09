@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
+import { mediaQueries } from '../utils/themes/mediaQueries'
 import SingleBlock from './SingleBlock'
 
 const Table = styled.div`
@@ -8,6 +9,12 @@ const Table = styled.div`
   border-radius: 10px;
   border: 1px solid #a8a8a8;
   box-shadow: 0 0.5rem 1.2rem rgb(189 197 209 / 20%);
+  // margin: 0 0 0 1rem;
+  width: auto;
+
+  ${mediaQueries.tabport} {
+    // margin: 0 1rem 0;
+  }
 }
 `
 

@@ -5,10 +5,14 @@ import ethereumOne from '../Assets/ethereum-1.svg'
 import globe from '../Assets/icon-8.svg'
 import Notepad from '../Assets/icon-2-1.svg'
 import Difficulty from '../Assets/icon-51.svg'
+import { mediaQueries } from '../utils/themes/mediaQueries'
 
 const CurrentDiv = styled.div`
 
-display: relative;
+margin: 0 1rem;
+${mediaQueries.tabport} {
+  margin: 0 3rem;
+}
 
 .inner{
   border-radius: 10px;
@@ -24,6 +28,10 @@ display: relative;
   transform: translateY(-3rem);
   width: 100%;
   box-shadow: 0 0.5rem 1.2rem rgb(189 197 209 / 20%);
+
+  ${mediaQueries.tabport} {
+    grid-template-columns: 1fr;
+  }
 }
  
 
