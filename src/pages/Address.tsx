@@ -23,6 +23,10 @@ const HeroSection = styled.div`
 const AddressDiv = styled.div`
   display: inline-flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  ${mediaQueries.tabport} {
+    justify-content: flex-start;
+  }
 
   .address {
     font-size: 1.5rem;
@@ -30,14 +34,22 @@ const AddressDiv = styled.div`
     color: #4a4f55;
     font-weight: 600;
     margin-right: 0.5rem;
-  }
 
+  }
+  
   .addressNum {
     font-size: 1.1rem;
     align-self: flex-end;
     color: #7b8a96;
     font-weight: 600;
     margin-right: 0.5rem;
+    ${mediaQueries.tabport} {
+      font-size: 1rem;
+    }
+    ${mediaQueries.tabland} {
+     font-size: 1rem;
+    
+    }
   }
 
   .button {
@@ -49,6 +61,7 @@ const AddressDiv = styled.div`
     border: none;
     margin-right: 0.5rem;
 
+    
     :hover {
       background: #7b8a96;
       color: white;
@@ -59,6 +72,15 @@ const AddressDiv = styled.div`
 const ButtonsContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
+
+  ${mediaQueries.tabport} {
+    display: none;
+    visibility: hidden;
+  }
+  ${mediaQueries.tabland} {
+    display: none;
+    visibility: hidden;
+  }
 
   .btns {
     color: white;

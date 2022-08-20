@@ -17,6 +17,7 @@ const HeaderContainer = styled.div`
 `
 
 const MainHeader = styled(Flex)`
+
   .logo {
     height: 40px;
     width: 160px;
@@ -36,6 +37,11 @@ const MainHeader = styled(Flex)`
 `
 
 const NavList = styled(Flex)`
+
+${mediaQueries.tabland} {
+  width: 95vw;
+}
+
   .nav {
     margin: 12px;
     padding: 0 5px;
@@ -72,7 +78,8 @@ const NavList = styled(Flex)`
       padding: 1rem 0;
       box-shadow: 0 0.5rem 1.2rem rgb(189 197 209 / 20%);
       border-radius: 0 0 12px 12px;
-  
+    
+      
       ul {
         list-style: none;
         display:block;
@@ -88,6 +95,10 @@ const NavList = styled(Flex)`
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         padding: 1.5rem 4rem 1.5rem 2rem;
+
+        ${mediaQueries.tabland} {
+          min-width: 85vw !important;
+        }
   
         div {
           font-size: 0.85rem;
@@ -185,7 +196,7 @@ const Header: FC = () => {
 
   return (
     <HeaderContainer>
-      <MainHeader justifyContent="space-between">
+      <MainHeader justifyContent="space-between" flexWrap='wrap'>
         <div>
           <a href="https://etherscan.io">
             <img src={ethereumLogo} alt="ethereumLogo" className="logo" />
@@ -200,7 +211,7 @@ const Header: FC = () => {
         <div>
           {location.pathname !== '/' && screenSize >= 760 && (
             <SearchForm
-              maxWidth={'50vw'}
+              maxWidth={'100%'}
               fontSize={'14px'}
               height={'2.4rem'}
               margin={'0.25rem 0 0.25rem'}

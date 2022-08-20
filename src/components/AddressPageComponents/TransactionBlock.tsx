@@ -32,6 +32,12 @@ const TransactionBlockHeader = styled.div`
       flex-wrap: wrap;
       padding:0;
     }
+    
+    ${mediaQueries.tabland} {
+      flex-wrap: wrap;
+      padding:0;
+    
+    }
 
     li {
       padding: 1rem 1rem 1rem 0.25rem;
@@ -59,6 +65,7 @@ ${mediaQueries.tabport} {
   max-width: 100%;
   display: inline;
 }
+
 .all__tx {
   text-decoration: none;
 
@@ -74,25 +81,41 @@ ${mediaQueries.tabport} {
 
 const TransactionTable = styled.table`
   width: 100%;
-  z-index: 10;
-  overflow-x: scroll;
+  
   ${mediaQueries.tabport} {
+    width: 100% !important;
+    display: block;
     overflow-x: scroll;
-    max-width: 100%;
+    white-space: nowrap;
+    margin-top: 0.5rem;
   }
+  
+  ${mediaQueries.tabland} {
+    width: 100% !important;
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin-top: 0.5rem;
 
+  }
+  
   .thead {
     background-color: #eaedf4;
     height: 2.5rem;
+
+    
+    
     .table__head__row {
+      
       .empty__header {
-       padding: 0 1.5rem;
+        padding: 0 1.5rem;
       }
       th {
         text-align: left;
         font-size: 0.9rem;
         font-weight: bold;
-
+        text-align: left;
+        padding: 0 1rem;
 
         .funnel {
           border: none;
@@ -105,6 +128,7 @@ const TransactionTable = styled.table`
       }
     }
   }
+
 `
 
 const TransactionBlock: FC = () => {

@@ -1,19 +1,29 @@
 import React, { FC } from 'react'
 import { Eye, Journal } from 'react-bootstrap-icons'
 import styled from 'styled-components'
+import { mediaQueries } from '../../utils/themes/mediaQueries'
 
 const TableData = styled.tr`
-width: 100%;
+width: auto;
 text-align: left;
 height: 3rem;
 border-bottom: 1px solid grey;
+
+
+&:last-child {
+  border-bottom: none;
+}
+
+td{
+  padding: 0 1rem;
+}
 
 .eye {
   border: none;
   background-color: #D3D5DC;
   font-size: 0.75rem;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.25rem !important;
+  height: 1.25rem !important;
   border-radius: 5px;
   justify-item: center;
 }

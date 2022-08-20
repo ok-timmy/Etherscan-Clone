@@ -15,6 +15,10 @@ const SearchSection: FC = () => {
       height: calc(height+10rem);
     }
 
+    ${mediaQueries.tabland} {
+      height: 17.5rem;
+    }
+
     .formHeader {
       color: white;
       margin: 2rem 0 0;
