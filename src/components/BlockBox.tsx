@@ -9,11 +9,11 @@ const Table = styled.div`
   border-radius: 10px;
   border: 1px solid #a8a8a8;
   box-shadow: 0 0.5rem 1.2rem rgb(189 197 209 / 20%);
-  // margin: 0 0 0 1rem;
-  width: auto;
+  width: 100%;
 
   ${mediaQueries.tabport} {
-    // margin: 0 1rem 0;
+    margin: 0 1rem 0;
+    max-width: calc(100vw - 2rem);
   }
 }
 `

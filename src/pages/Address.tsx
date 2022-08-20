@@ -11,6 +11,7 @@ import styled from 'styled-components'
 import MoreInfo from '../components/AddressPageComponents/MoreInfo'
 import Overview from '../components/AddressPageComponents/Overview'
 import TransactionBlock from '../components/AddressPageComponents/TransactionBlock'
+import { mediaQueries } from '../utils/themes/mediaQueries'
 
 const HeroSection = styled.div`
   padding: 1rem;
@@ -84,6 +85,12 @@ const Section = styled.div`
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 1rem;
   height: auto;
+
+  ${mediaQueries.tabport} {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 1rem;
+  }
 `
 
 const Address: FC = () => {
@@ -119,6 +126,7 @@ const Address: FC = () => {
           })}
         </ButtonsContainer>
       </HeroSection>
+
       <Section>
         <Overview />
         <MoreInfo />

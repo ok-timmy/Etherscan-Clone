@@ -6,6 +6,7 @@ import {
   ThreeDotsVertical,
 } from 'react-bootstrap-icons'
 import styled from 'styled-components'
+import { mediaQueries } from '../../utils/themes/mediaQueries'
 import SingleTransaction from './SingleTransaction'
 
 const TransactionBlockDiv = styled.div`
@@ -26,6 +27,11 @@ const TransactionBlockHeader = styled.div`
     list-style-type: none;
     display: inline-flex;
     padding: 0;
+
+    ${mediaQueries.tabport} {
+      flex-wrap: wrap;
+      padding:0;
+    }
 
     li {
       padding: 1rem 1rem 1rem 0.25rem;
@@ -49,8 +55,13 @@ justify-content: space-between;
 padding: 1rem 1rem 2rem;
 font-weight: 600;
 
+${mediaQueries.tabport} {
+  max-width: 100%;
+  display: inline;
+}
 .all__tx {
   text-decoration: none;
+
 }
 .three__dots {
   width: 1.5rem;
@@ -63,6 +74,13 @@ font-weight: 600;
 
 const TransactionTable = styled.table`
   width: 100%;
+  z-index: 10;
+  overflow-x: scroll;
+  ${mediaQueries.tabport} {
+    overflow-x: scroll;
+    max-width: 100%;
+  }
+
   .thead {
     background-color: #eaedf4;
     height: 2.5rem;

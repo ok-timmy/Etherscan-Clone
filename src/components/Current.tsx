@@ -11,7 +11,7 @@ const CurrentDiv = styled.div`
 
 margin: 0 1rem;
 ${mediaQueries.tabport} {
-  margin: 0 3rem;
+  margin: 0 1rem;
 }
 
 .inner{

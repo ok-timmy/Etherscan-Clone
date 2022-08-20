@@ -5,7 +5,6 @@ import BlockBox from './BlockBox'
 import TransactionBox from './TransactionBox'
 
 const TandB = styled.div`
-  // margin-top: -1rem;
   margin: -1rem 1rem 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -16,14 +15,17 @@ const TandB = styled.div`
   ${mediaQueries.tabport} {
     grid-template-columns: 1fr;
     grid-row-gap: 1rem;
-    max-width: 80%;
-    margin: 0 3rem 2rem;
+    grid-column-gap: 0;
+    max-width: 100vw;
+    // padding: 0 1rem 2rem;
+    margin: -1rem 0 2rem;
   }
-
+  
   ${mediaQueries.tabland} {
     grid-template-columns: 1fr;
     grid-row-gap: 1rem;
     max-width: 95%;
+    grid-column-gap: 0;
     margin: 0 2rem 2rem;
   }
 `
