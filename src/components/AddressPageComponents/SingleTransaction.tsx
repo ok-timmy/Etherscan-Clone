@@ -15,7 +15,7 @@ border-bottom: 1px solid grey;
 }
 
 td{
-  padding: 0 1rem;
+  padding: 0 0.5rem 0 1rem;
 }
 
 .eye {
@@ -39,6 +39,8 @@ td{
   padding: 0.25rem 0.75rem;
   border-radius: 4px;
 }
+
+
 
 .out {
   font-size: 0.9rem;
