@@ -1,7 +1,7 @@
 import React, { FC, useEffect } from 'react'
-import Current from '../components/Current'
-import SearchSection from '../components/SearchSection'
-import TransactionAndBlockSection from '../components/TransactionAndBlockSection'
+import Current from '../components/HomePageComponents/Current'
+import SearchSection from '../components/HomePageComponents/SearchSection'
+import TransactionAndBlockSection from '../components/HomePageComponents/TransactionAndBlockSection'
 
 const Home: FC = () => {
   const result = async (urlData: string) => {

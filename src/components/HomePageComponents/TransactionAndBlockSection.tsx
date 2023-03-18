@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { mediaQueries } from '../utils/themes/mediaQueries'
+import { mediaQueries } from '../../utils/themes/mediaQueries'
 import BlockBox from './BlockBox'
 import TransactionBox from './TransactionBox'
 

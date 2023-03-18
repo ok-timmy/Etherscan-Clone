@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import fairspin from '../Assets/fairspin_20.webp'
-import { mediaQueries } from '../utils/themes/mediaQueries'
+import { mediaQueries } from '../../utils/themes/mediaQueries'
 import SearchForm from './SearchForm'
 
 const SearchSection: FC = () => {

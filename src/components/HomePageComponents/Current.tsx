@@ -1,11 +1,11 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { bgColor } from '../utils/themes/colors'
+import { bgColor } from '../../utils/themes/colors'
 import ethereumOne from '../Assets/ethereum-1.svg'
 import globe from '../Assets/icon-8.svg'
 import Notepad from '../Assets/icon-2-1.svg'
 import Difficulty from '../Assets/icon-51.svg'
-import { mediaQueries } from '../utils/themes/mediaQueries'
+import { mediaQueries } from '../../utils/themes/mediaQueries'
 
 const CurrentDiv = styled.div`
 

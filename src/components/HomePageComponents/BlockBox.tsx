@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import styled from 'styled-components'
-import { mediaQueries } from '../utils/themes/mediaQueries'
+import { mediaQueries } from '../../utils/themes/mediaQueries'
 import SingleBlock from './SingleBlock'
 
 const Table = styled.div`

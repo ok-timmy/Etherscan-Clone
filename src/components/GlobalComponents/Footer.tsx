@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { HeartFill } from 'react-bootstrap-icons'
 import styled from 'styled-components'
 import ethereeum from '../Assets/ethereum.svg'
-import { mediaQueries } from '../utils/themes/mediaQueries'
+import { mediaQueries } from '../../utils/themes/mediaQueries'
 
 const FooterDiv = styled.div`
   display: flex;

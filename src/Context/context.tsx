@@ -1,11 +1,15 @@
-import { EtherscanType } from './../Interfaces/EtherscanInterface';
+import { EtherscanType } from '../Interfaces/EtherscanInterface';
 import React, { useState } from "react";
+
+interface Props {
+  children: React.ReactNode;
+}
 
 export const EtherscanContext = React.createContext<EtherscanType | undefined>(
   undefined
 );
 
-const EtherscanProvider: React.FC<React.ReactNode> = ({ children }) => {
+const EtherscanProvider: React.FC<Props> = ({ children }) => {
   const [address, setAddress] = useState<string>("");
 
   return (

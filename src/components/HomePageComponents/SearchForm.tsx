@@ -1,6 +1,6 @@
 import React, { FC, useState } from 'react'
 import { Search } from 'react-bootstrap-icons'
-import { Form } from '../utils/form/form'
+import { Form } from '../../utils/form/form'
 
 
 interface Props {

@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Header from './components/GlobalComponents/Header';
+import Footer from './components/GlobalComponents/Footer';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Address from './pages/Address';

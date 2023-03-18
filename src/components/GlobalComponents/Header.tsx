@@ -1,14 +1,14 @@
 import React, { FC, useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { Flex } from '../utils/flex/flex'
-import { bgColor, buttonColor, hoverColor } from '../utils/themes/colors'
+import { Flex } from '../../utils/flex/flex'
+import { bgColor, buttonColor, hoverColor } from '../../utils/themes/colors'
 import ethereumLogo from '../Assets/logo-etherscan.svg'
 import eth from '../Assets/ethereum-icon.webp'
-import { linkFonts } from '../utils/typography/fonts'
+import { linkFonts } from '../../utils/typography/fonts'
 import { ChevronDown, ChevronRight, PersonCircle } from 'react-bootstrap-icons'
-import SearchForm from './SearchForm'
+import SearchForm from '../HomePageComponents/SearchForm'
 import { useLocation } from 'react-router-dom'
-import { mediaQueries } from '../utils/themes/mediaQueries'
+import { mediaQueries } from '../../utils/themes/mediaQueries'
 
 const HeaderContainer = styled.div`
   backgroundcolor: ${bgColor.lightTheme};
