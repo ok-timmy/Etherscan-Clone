@@ -1,23 +1,61 @@
-import React, { FC } from 'react'
-import { HeartFill } from 'react-bootstrap-icons'
-import styled from 'styled-components'
-import ethereeum from '../../Assets/ethereum.svg'
-import { mediaQueries } from '../../utils/themes/mediaQueries'
+import React, { FC } from "react";
+import { HeartFill } from "react-bootstrap-icons";
+import styled from "styled-components";
+import ethereeum from "../../Assets/ethereum-1.svg";
+import { mediaQueries } from "../../utils/themes/mediaQueries";
+import { Company, Products, Resources } from "../../utils/links/link";
+import { Flex } from "../../utils/flex/flex";
+import { BsFacebook, BsMedium, BsTwitter } from "react-icons/bs";
+import { GrReddit } from "react-icons/gr";
+import { RxPinTop } from "react-icons/rx";
+import {AiFillHeart} from 'react-icons/ai'
 
 const FooterDiv = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #22335c;
+  background-color: white;
   padding: 1rem;
-  color: white;
+  color: #212529;
 
   ${mediaQueries.tabport} {
     padding: 2.5rem;
   }
-`
+`;
+
+const SuperFooter = styled(Flex)`
+  justify-content: space-between;
+  padding: 2.5rem 0.25rem;
+  border-bottom: 1px solid black;
+
+  .left {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .toTop {
+     a {
+      text-decoration: none;
+      color: #212529;
+
+      &:hover {
+        color: #0784C3;
+      }
+     }
+  }
+`;
+
+const Icon = styled.div`
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background-color: #dee2e6;
+  padding: 0 0.5rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+`;
 
 const FooterTop = styled.div`
-  padding-bottom: 1.5rem;
+  padding: 1.5rem;
   flex: 4;
   display: grid;
   grid-template-columns: 4fr 7fr;
@@ -29,7 +67,6 @@ const FooterTop = styled.div`
   }
 
   .ethereum-desc {
-    
     h3 {
       display: flex;
       align-items: top;
@@ -44,9 +81,9 @@ const FooterTop = styled.div`
         font-size: 12px;
         font-weight: 500;
       }
-${mediaQueries.tabport} {
-  width: 100%;
-}
+      ${mediaQueries.tabport} {
+        width: 100%;
+      }
     }
   }
 
@@ -55,10 +92,9 @@ ${mediaQueries.tabport} {
     heignt: auto;
     margin-right: 12px;
   }
-`
+`;
 
 const FooterNavList = styled.div`
-
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;
@@ -74,8 +110,8 @@ const FooterNavList = styled.div`
     h3 {
       border-bottom: 0.1px solid white;
       font-size: 14px;
-      padding-bottom: 12px;
-      font-weight: 500;
+      padding-bottom: 1rem;
+      font-weight: 600;
     }
     ul {
       padding: 0;
@@ -85,14 +121,18 @@ const FooterNavList = styled.div`
         line-height: 24px;
         a {
           text-decoration: none;
-          color: white;
-          font-size: 12px;
+          color: #212529;
+          font-size: 0.825rem;
           font-weight: 400;
+
+          &:hover {
+            color: blue;
+          }
         }
       }
     }
   }
-`
+`;
 
 const FooterBottom = styled.div`
   flex: 1;
@@ -100,88 +140,42 @@ const FooterBottom = styled.div`
   justify-content: space-between;
   border-top: 1px solid white;
   padding: 1rem 0 1rem;
-`
+  font-size: 0.85rem;
+
+  a{
+    text-decoration: none;
+  }
+`;
 
 const Footer: FC = () => {
-  const Company = [
-    {
-      name: 'About Us',
-      link: 'https://etherscan.io/aboutus',
-    },
-    {
-      name: 'Contact Us',
-      link: 'https://etherscan.io/contactus',
-    },
-    {
-      name: 'Brand Assets',
-      link: 'https://etherscan.io/contactus',
-    },
-    {
-      name: 'Careers',
-      link: 'https://etherscan.io/contactus',
-    },
-    {
-      name: 'Terms Of Service',
-      link: 'https://etherscan.io',
-    },
-    {
-      name: 'Bug Bounty',
-      link: 'https://etherscan.io',
-    },
-  ]
-
-  const Resources = [
-    {
-      name: 'API Documentation',
-      link: 'https://www.etherscan.io',
-    },
-    {
-      name: 'Knowledge Base',
-      link: 'https://www.etherscan.io',
-    },
-    {
-      name: 'Newsletter',
-      link: 'https://www.etherscan.io',
-    },
-    {
-      name: 'Network Status',
-      link: 'https://www.etherscan.io',
-    },
-    {
-      name: 'Disqus Comments',
-      link: 'https://www.etherscan.io',
-    },
-  ]
-
-  const Products = [
-    {
-      name: 'Advertise',
-      link: 'https://www.etherscan.io',
-    },
-    {
-      name: 'Explorer-As-A-Service',
-      link: 'https://www.etherscan.io',
-    },
-    {
-      name: 'Developer API',
-      link: 'https://www.etherscan.io',
-    },
-    {
-      name: 'Blockscan',
-      link: 'https://www.etherscan.io',
-    },
-    {
-      name: 'Beaconscan',
-      link: 'https://www.etherscan.io',
-    },
-  ]
-
   return (
     <FooterDiv>
+      <SuperFooter>
+        <div className="left">
+          <Icon>
+            <BsTwitter />
+          </Icon>
+          <Icon>
+            <BsMedium />
+          </Icon>
+          <Icon>
+            <BsFacebook />
+          </Icon>
+          <Icon>
+            <GrReddit />
+          </Icon>
+        </div>
+        <div className="toTop">
+          <a href="http://localhost:3000">
+            {" "}
+            <RxPinTop /> Back to Top
+          </a>
+        </div>
+      </SuperFooter>
       <FooterTop>
         <div className="ethereum-desc">
           <h3>
-            {' '}
+            {" "}
             <img src={ethereeum} alt="" /> Powered by Ethereum
           </h3>
           <div className="col-1-desc">
@@ -199,10 +193,10 @@ const Footer: FC = () => {
               {Company.map(({ name, link }) => {
                 return (
                   <li key={name}>
-                    {' '}
+                    {" "}
                     <a href={link}>{name}</a>
                   </li>
-                )
+                );
               })}
             </ul>
           </div>
@@ -214,7 +208,7 @@ const Footer: FC = () => {
                   <li key={name}>
                     <a href={link}>{name}</a>
                   </li>
-                )
+                );
               })}
             </ul>
           </div>
@@ -226,7 +220,7 @@ const Footer: FC = () => {
                   <li key={name}>
                     <a href={link}>{name}</a>
                   </li>
-                )
+                );
               })}
             </ul>
           </div>
@@ -234,15 +228,15 @@ const Footer: FC = () => {
       </FooterTop>
       <FooterBottom>
         <div>
-          Etherscan © 2022 (B1) |{' '}
-          <span>
-            {' '}
-            Donate <HeartFill color="red" />{' '}
-          </span>
+          Etherscan © 2023 (F1)
+        </div>
+
+        <div>
+          Donations  <a href="http://localhost:3000">0x5a......963798fF52 </a> <AiFillHeart color="red"/>
         </div>
       </FooterBottom>
     </FooterDiv>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

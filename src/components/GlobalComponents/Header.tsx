@@ -9,6 +9,7 @@ import { ChevronDown, ChevronRight, PersonCircle } from "react-bootstrap-icons";
 import SearchForm from "../HomePageComponents/SearchForm";
 import { useLocation } from "react-router-dom";
 import { mediaQueries } from "../../utils/themes/mediaQueries";
+import { BsSun } from "react-icons/bs";
 
 const HeaderContainer = styled.div`
   backgroundcolor: ${bgColor.lightTheme};
@@ -47,11 +48,12 @@ text-decoration: underline;
 
   .btn {
     padding: 0.25rem 0.5rem;
-    background-color: ${buttonColor.lightTheme};
-    border: none;
+    background-color: white;
+    border: 1px solid gray;
     margin: 0.5rem 0.5rem 0;
     cursor: pointer;
     position: relative;
+    height: 2rem;
 
     &:hover {
       .btn-nav {
@@ -69,7 +71,7 @@ text-decoration: underline;
       right: 0rem;
       top: 2.5rem;
       border-top: 0.25rem solid blue;
-      background: white;
+      background-color: white;
       z-index: 10000;
       text-align:left;
       width: 14rem;
@@ -96,7 +98,7 @@ text-decoration: underline;
 `;
 
 const MainHeader = styled(Flex)`
-padding: 0.25rem 1rem;
+  padding: 0.25rem 1rem;
 
   .logo {
     height: 40px;
@@ -241,23 +243,7 @@ const Header: FC = () => {
 
           <div>
             <button className="btn">
-              <img src={eth} alt="" className="btn-image" />
-              <div className="btn-nav">
-                <ul>
-                  <li>Ethereum Mainnet</li>
-                  <li>Ethereum Mainnet</li>
-                </ul>
-                <ul>
-                  <li>Ropsten Mainnet</li>
-                  <li>Kovan Mainnet</li>
-                  <li>Rinkeby Mainnet</li>
-                  <li>Goerli Mainnet</li>
-                  <li>Sepolia Mainnet</li>
-                </ul>
-                <ul>
-                  <li>Beacon Scan</li>
-                </ul>
-              </div>
+              <BsSun />
             </button>
             <button className="btn">
               <img src={eth} alt="" className="btn-image" />
