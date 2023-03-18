@@ -1,3 +1,3 @@
 export const linkFonts = {
-    fontSize: "14px",
+    fontSize: "16px",
 }

@@ -11,7 +11,7 @@ interface FormProps {
 }
 
 
-export const Form = styled.form<FormProps>`
+export const Mainform = styled.form<FormProps>`
 display: flex;
 height: ${({height})=> (height ? height : "2.8rem")}};
 max-width: ${({maxWidth})=> (maxWidth ? maxWidth : "55vw")}};
