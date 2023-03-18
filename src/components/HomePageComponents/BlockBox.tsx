@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import styled from 'styled-components'
 import { mediaQueries } from '../../utils/themes/mediaQueries'
 import SingleBlock from './SingleBlock'
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 
 const Table = styled.div`
   display: flex;
@@ -19,8 +20,13 @@ const Table = styled.div`
 `
 
 const TableHeader = styled.div`
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   border-bottom: 1px solid black;
+
+  h4{
+    font-size: 1rem;
+    font-weight: 600;
+  }
 `
 
 const TableContent = styled.div`
@@ -28,7 +34,7 @@ const TableContent = styled.div`
 
   .boxContent {
     overflow-y: scroll;
-    max-height: 25rem;
+    max-height: auto;
 
     &::-webkit-scrollbar {
       width: 4px;
@@ -52,25 +58,20 @@ const TableContent = styled.div`
 `
 
 const TableButton = styled.div`
-  padding: 0.5rem;
-  border-top: 1px solid black;
+padding: 1rem;
+border-top: 1px solid black;
 
-  .viewButton {
-    margin: auto;
-    padding: 0.5rem;
-    font-size: 12px;
-    width: 100%;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: rgba(234, 244, 251, 0.8);
-    color: #3498db;
+.viewButton {
+  font-size: 1rem;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  background: none;
 
-    &:hover {
-      background-color: #3498db;
-      color: white;
-    }
+  &:hover {
+    color: #0784c3;
   }
+}
 `
 
 const BlockBox: FC = () => {
@@ -87,14 +88,16 @@ const BlockBox: FC = () => {
           <SingleBlock />
           <SingleBlock />
           <SingleBlock />
-          <SingleBlock />
-          <SingleBlock />
-          <SingleBlock />
-          <SingleBlock />
         </div>
       </TableContent>
       <TableButton>
-        <button className="viewButton">View All Transactions</button>
+        <button className="viewButton">
+          View All Transactions{" "}
+          <HiOutlineArrowNarrowRight
+            fontSize={"1.8rem"}
+            style={{ paddingLeft: "0.5rem" }}
+          />
+        </button>
       </TableButton>
     </Table>
   )

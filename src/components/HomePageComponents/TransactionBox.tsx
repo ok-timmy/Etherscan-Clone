@@ -1,7 +1,8 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
-import { mediaQueries } from '../../utils/themes/mediaQueries'
-import SingleTx from './SingleTx'
+import React, { FC } from "react";
+import styled from "styled-components";
+import { mediaQueries } from "../../utils/themes/mediaQueries";
+import SingleTx from "./SingleTx";
+import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 
 const Table = styled.div`
   display: flex;
@@ -13,13 +14,18 @@ const Table = styled.div`
   ${mediaQueries.tabport} {
     margin: 0 1rem 0;
     max-width: calc(100vw - 2rem);
-    }
-`
+  }
+`;
 
 const TableHeader = styled.div`
-  padding: 0.5rem 1rem;
+  padding: 1rem;
   border-bottom: 1px solid black;
-`
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+`;
 
 const TableContent = styled.div`
   padding: 0 0.5rem;
@@ -28,7 +34,7 @@ const TableContent = styled.div`
 
   .boxContent {
     overflow-y: scroll;
-    max-height: 25rem;
+    max-height: auto;
 
     &::-webkit-scrollbar {
       width: 4px;
@@ -49,29 +55,24 @@ const TableContent = styled.div`
       display: block;
     }
   }
-`
+`;
 
 const TableButton = styled.div`
-  padding: 0.5rem;
+  padding: 1rem;
   border-top: 1px solid black;
 
   .viewButton {
-    margin: auto;
-    padding: 0.5rem;
-    font-size: 12px;
+    font-size: 1rem;
     width: 100%;
     cursor: pointer;
     border: none;
-    border-radius: 5px;
-    background-color: rgba(234, 244, 251, 0.7);
-    color: #3498db;
+    background: none;
 
     &:hover {
-      background-color: #3498db;
-      color: white;
+      color: #0784c3;
     }
   }
-`
+`;
 
 const TransactionBox: FC = () => {
   return (
@@ -87,17 +88,19 @@ const TransactionBox: FC = () => {
           <SingleTx />
           <SingleTx />
           <SingleTx />
-          <SingleTx />
-          <SingleTx />
-          <SingleTx />
-          <SingleTx />
         </div>
       </TableContent>
       <TableButton>
-        <button className="viewButton">View All Transactions</button>
+        <button className="viewButton">
+          View All Transactions{" "}
+          <HiOutlineArrowNarrowRight
+            fontSize={"1.8rem"}
+            style={{ paddingLeft: "0.5rem" }}
+          />
+        </button>
       </TableButton>
     </Table>
-  )
-}
+  );
+};
 
-export default TransactionBox
+export default TransactionBox;

@@ -41,7 +41,7 @@ const SearchForm: FC<Props> = ({ maxWidth, fontSize, height, margin }) => {
             onChange={(e) => setAddress(e.target.value)}
           />
           <button className="searchButton" type="submit">
-            <Search />
+            <Search/>
           </button>
         </Mainform>
       ) : (

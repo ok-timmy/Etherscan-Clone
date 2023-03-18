@@ -1,45 +1,43 @@
-import React, { FC } from 'react'
-import styled from 'styled-components'
-import { bgColor } from '../../utils/themes/colors'
-import ethereumOne from '../../Assets/ethereum-1.svg'
-import globe from '../../Assets/icon-8.svg'
-import Notepad from '../../Assets/icon-2-1.svg'
-import Difficulty from '../../Assets/icon-51.svg'
-import { mediaQueries } from '../../utils/themes/mediaQueries'
+import React, { FC } from "react";
+import styled from "styled-components";
+import { BiServer } from "react-icons/bi";
+import { CiGlobe } from "react-icons/ci";
+import { TbGauge } from "react-icons/tb";
+import { bgColor } from "../../utils/themes/colors";
+import ethereumOne from "../../Assets/ethereum-1.svg";
+import { mediaQueries } from "../../utils/themes/mediaQueries";
 
 const CurrentDiv = styled.div`
-
-margin: 0 1rem;
-${mediaQueries.tabport} {
   margin: 0 1rem;
-}
-
-.inner{
-  border-radius: 10px;
-  background-color: ${bgColor.lightTheme};
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  margin: 0 auto;
-  z-index: 10000;
-  -webkit-transform: translateY(-3rem);
-  transform: translateY(-3rem);
-  width: 100%;
-  box-shadow: 0 0.5rem 1.2rem rgb(189 197 209 / 20%);
-
   ${mediaQueries.tabport} {
-    grid-template-columns: 1fr;
+    margin: 0 1rem;
   }
-}
- 
+
+  .inner {
+    border-radius: 10px;
+    background-color: ${bgColor.lightTheme};
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 0 auto;
+    z-index: 10000;
+    -webkit-transform: translateY(-3rem);
+    transform: translateY(-3rem);
+    width: 100%;
+    box-shadow: 0 0.5rem 1.2rem rgb(189 197 209 / 20%);
+
+    ${mediaQueries.tabport} {
+      grid-template-columns: 1fr;
+    }
+  }
 
   &:nth-child(2) {
     border-left: 1px solid gray;
     border-right: 1px solid gray;
   }
-`
+`;
 
 const InnerDiv = styled.div`
   display: flex;
@@ -56,15 +54,16 @@ const InnerDiv = styled.div`
   }
 
   .col-1-heading {
-    font-size: 0.8rem;
-    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 0.5rem;
+    font-weight: 600;
   }
   .col-1 {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding: 1rem;
-    width:100%;
+    width: 100%;
   }
 
   .col-2 {
@@ -80,18 +79,24 @@ const InnerDiv = styled.div`
       align-items: center;
     }
   }
-`
+`;
 
 const Image = styled.img`
   height: 2rem;
   width: 2rem;
   margin-right: 0.5rem;
-`
+`;
+
+const Icon = styled.div`
+  height: 2rem;
+  width: 2rem;
+  margin-right: 0.5rem;
+`;
 
 const Current: FC = () => {
   return (
     <CurrentDiv>
-      <div className='inner'>
+      <div className="inner">
         <InnerDiv>
           <div className="col-1">
             <Image src={ethereumOne} alt="" />
@@ -103,7 +108,12 @@ const Current: FC = () => {
             </div>
           </div>
           <div className="col-1">
-            <Image src={globe} alt="globe" />
+            {/* <Image src={globe} alt="globe" />
+             */}
+            <Icon>
+              {" "}
+              <CiGlobe fontSize={"1.5rem"} />
+            </Icon>
             <div>
               <p className="col-1-heading">MARKET CAP</p>
               <p>$176,240,834,841.00</p>
@@ -113,7 +123,10 @@ const Current: FC = () => {
         <InnerDiv>
           <div className="col-2">
             <div className="col-2-inner">
-              <Image src={Notepad} alt="" />
+              {/* <Image src={Notepad} alt="" /> */}
+              <Icon>
+                <BiServer fontSize={"1.5rem"} fontWeight={200} />{" "}
+              </Icon>
               <div>
                 <p className="col-1-heading">TRANSACTIONS</p>
                 <p>
@@ -130,7 +143,10 @@ const Current: FC = () => {
           </div>
           <div className="col-2">
             <div className="col-2-inner">
-              <Image src={Difficulty} alt="" />
+              {/* <Image src={Difficulty} alt="" /> */}
+              <Icon>
+                <TbGauge fontSize={"1.5rem"} fontWeight={200} />
+              </Icon>
               <div>
                 <p className="col-1-heading">DIFFICULTY</p>
                 <p>
@@ -147,7 +163,7 @@ const Current: FC = () => {
         <InnerDiv>
           <div className="col-2">
             <div className="col-2-inner">
-              <Image src={Notepad} alt="" />
+              {/* <Image src={Notepad} alt="" /> */}
               <div>
                 <p className="col-1-heading">TRANSACTIONS</p>
                 <p>
@@ -164,7 +180,6 @@ const Current: FC = () => {
           </div>
           <div className="col-2">
             <div className="col-2-inner">
-              <Image src={Difficulty} alt="" />
               <div>
                 <p className="col-1-heading">DIFFICULTY</p>
                 <p>
@@ -181,7 +196,7 @@ const Current: FC = () => {
         {/* <div></div> */}
       </div>
     </CurrentDiv>
-  )
-}
+  );
+};
 
-export default Current
+export default Current;

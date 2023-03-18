@@ -6,8 +6,8 @@ import SearchForm from './SearchForm'
 
 const SearchSection: FC = () => {
   const CurrentSection = styled.div`
-    height: 47vh;
-    background: #22335c;
+    height: 45vh;
+    background: #18213C;
     padding: 1rem 1rem;
     z-index: 500;
 
