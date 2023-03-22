@@ -14,24 +14,9 @@ const MoreInfoDivHeader = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
-  border-bottom: 1px solid black;
 
   .more__info {
     font-weight: bold;
-  }
-  .more__div {
-    display: flex;
-    justify-content: space-between;
-
-    div {
-      padding: 0.0625rem 0.5rem;
-      background: #D5DAE2;
-      margin-right: 8px;
-      font-size: 12px;
-      border-radius: 4px;
-      cursor: pointer;
-
-    }
   }
 `
 
@@ -41,7 +26,6 @@ const MoreInfoContent = styled.div`
 `
 const MoreInfoDetails = styled.div`
   display: flex;
-  // border-bottom: 1px solid black;
   padding: 1rem 0.5rem;
   font-size: 1rem;
 
@@ -62,12 +46,6 @@ const MoreInfo: FC = () => {
     <MoreInfoDiv>
       <MoreInfoDivHeader>
         <div className='more__info'>More Info</div>{' '}
-        <div className='more__div'>
-          <div>
-            <HeartFill  color='#3498db'/>
-          </div>{' '}
-          <div>More <ChevronDown/></div>
-        </div>
       </MoreInfoDivHeader>
       <MoreInfoContent>
         <MoreInfoDetails>

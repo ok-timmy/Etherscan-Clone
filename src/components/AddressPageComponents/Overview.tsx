@@ -12,7 +12,6 @@ const OverviewDiv = styled.div`
 `
 
 const OverViewHeader = styled.div`
-  border-bottom: 1px solid black;
   padding: 0.5rem;
   font-weight: bold;
 `
