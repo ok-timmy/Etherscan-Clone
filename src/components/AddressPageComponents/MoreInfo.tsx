@@ -12,10 +12,6 @@ const MoreInfoDiv = styled.div`
   padding: 1rem;
 `;
 const MoreInfoDivHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 0;
-
   .more__info {
     font-weight: bold;
   }

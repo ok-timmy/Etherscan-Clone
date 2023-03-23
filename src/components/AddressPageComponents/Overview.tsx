@@ -13,12 +13,10 @@ const OverviewDiv = styled.div`
 `;
 
 const OverViewHeader = styled.div`
-  padding: 0.5rem;
   font-weight: bold;
 `;
 
 const OverviewContent = styled.div`
-  padding: 0 0.5rem;
   height: auto;
 `;
 
@@ -33,7 +31,11 @@ const OverviewDetails = styled.div`
   }
 
   div{
+    display: flex;
+    justify-content: start;
+    vertical-align: baseline;
     height: 2rem;
+    color: #212529;
   }
 `;
 
@@ -45,7 +47,7 @@ const Overview: FC = () => {
         <OverviewDetails>
           <h4>ETH BALANCE</h4>
           <div>
-            <FaEthereum /> 0 ETH
+            <FaEthereum style={{textAlign:"center", alignSelf:"baseline"}}/> 0 ETH
           </div>
         </OverviewDetails>
         <OverviewDetails>
