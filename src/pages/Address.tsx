@@ -88,13 +88,14 @@ const ButtonsContainer = styled.div`
     background-color: #3498db;
     font-size: 12px;
     border: none;
-    padding: 0 16px;
+    padding: 4px 16px;
     border-radius: 4px;
     margin-right: 12px;
     height: 2rem;
 
-
-
+&:hover {
+  background-color: #0670A6;
+}
     .chevron {
       margin: 0 -0.5rem 0 0.5rem;
     }
